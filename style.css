@@ -22,7 +22,7 @@
     top:50px;
 }
 
-#web-app > .col-4 { 
+.my-row > .col-4 { 
     border-right:1px solid rgba(239, 239, 240, 0.7);
 }
 

@@ -167,7 +167,9 @@ const app = createApp ({
                     ],
                 }
             ]
-            
         }
+    },
+    methods: {
+
     }
 }).mount("#app");
