@@ -11,12 +11,12 @@ const app = createApp ({
                     visible: true,
                     messages: [
                         {
-                            date: '15:30',
+                            date: '12:33',
                             message: 'Hai portato a spasso il cane?',
                             status: 'sent'
                         },
                         {
-                            date: '15:50',
+                            date: '13:50',
                             message: 'Ricordati di stendere i panni',
                             status: 'sent'
                         },
@@ -38,12 +38,12 @@ const app = createApp ({
                             status: 'sent'
                         },
                         {
-                            date: '15:30',
+                            date: '16:22',
                             message: 'Bene grazie! Stasera ci vediamo?',
                             status: 'received'
                         },
                         {
-                            date: '15:30',
+                            date: '19:43',
                             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                             status: 'sent'
                         }
@@ -60,12 +60,12 @@ const app = createApp ({
                             status: 'received'
                         },
                         {
-                            date: '15:30',
+                            date: '15:34',
                             message: 'Sicuro di non aver sbagliato chat?',
                             status: 'sent'
                         },
                         {
-                            date: '15:30',
+                            date: '16:12',
                             message: 'Ah scusa!',
                             status: 'received'
                         }
@@ -77,12 +77,12 @@ const app = createApp ({
                     visible: true,
                     messages: [
                         {
-                            date: '15:30',
+                            date: '14:19',
                             message: 'Lo sai che ha aperto una nuova pizzeria?',
                             status: 'sent'
                         },
                         {
-                            date: '15:30',
+                            date: '18:15',
                             message: 'Si, ma preferirei andare al cinema',
                             status: 'received'
                         }
@@ -94,12 +94,12 @@ const app = createApp ({
                     visible: true,
                     messages: [
                         {
-                            date: '15:30',
+                            date: '19:59',
                             message: 'Ricordati di chiamare la nonna',
                             status: 'sent'
                         },
                         {
-                            date: '15:30',
+                            date: '22:30',
                             message: 'Va bene, stasera la sento',
                             status: 'received'
                         }
@@ -111,17 +111,17 @@ const app = createApp ({
                     visible: true,
                     messages: [
                         {
-                            date: '15:30',
+                            date: '08:55',
                             message: 'Ciao Claudia, hai novità?',
                             status: 'sent'
                         },
                         {
-                            date: '15:30',
+                            date: '9:28',
                             message: 'Non ancora',
                             status: 'received'
                         },
                         {
-                            date: '15:30',
+                            date: '00:30',
                             message: 'Nessuna nuova, buona nuova',
                             status: 'sent'
                         }
@@ -138,7 +138,7 @@ const app = createApp ({
                             status: 'sent'
                         },
                         {
-                            date: '15:30',
+                            date: '01:58',
                             message: 'Grazie per avermelo ricordato, le scrivo subito!',
                             status: 'received'
                         }
@@ -150,17 +150,17 @@ const app = createApp ({
                     visible: true,
                     messages: [
                         {
-                            date: '15:30',
+                            date: '11:25',
                             message: 'Ciao, andiamo a mangiare la pizza stasera?',
                             status: 'received'
                         },
                         {
-                            date: '15:30',
+                            date: '12:01',
                             message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
                             status: 'sent'
                         },
                         {
-                            date: '15:30',
+                            date: '13:14',
                             message: 'OK!!',
                             status: 'received'
                         }
@@ -168,6 +168,7 @@ const app = createApp ({
                 }
             ],
             currentChat: 0,
+            searchInput: "",
             messageInput: ""
         }
     },
