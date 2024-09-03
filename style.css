@@ -55,7 +55,9 @@ main {
 }
 
 .header-bg > div.h-100 > .fa-solid:hover,
-.white-circle {
+.white-circle,
+.notify-sec > .notify-string > p > span,
+.chat {
     cursor:pointer;
 }
 
@@ -74,4 +76,77 @@ main {
     height:50px;
     border-radius:50%;
     background-color:white;
+}
+
+.notify-sec > .notify-string > p > span{
+    font-size:0.85rem;
+    text-decoration:underline;
+    color: gray;
+}
+
+form .input-group-text,
+form input.form-control {
+    border-radius:0;
+}
+
+form .input-group-text:hover {
+    cursor:pointer;
+    background-color: rgba(239, 239, 240, 0.8);
+}
+
+form input.form-control:focus {
+    box-shadow:none;
+    border-color:#009687;
+}
+
+.chat-section {
+    overflow-y:auto;
+    max-height:83%;
+}
+
+.chat {
+    width:100%;
+    height:80px;
+}
+
+.chat:hover {
+    background-color: rgba(239, 239, 240, 0.5);
+}
+
+.chat > img {
+    width:60px;
+    height:60px;
+    border-radius:50px;
+}
+
+.chat > .chat-name {
+    margin-left:15px;
+    width:78%;
+    border-bottom:1px solid rgba(239, 239, 240, 0.8);
+}
+
+.chat-name h5 {
+    padding-top:15.1px;
+}
+
+.chat-name p {
+    max-width:250px;
+    padding-bottom:15.1px;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+.chat-name > .time {
+    flex-grow:1;
+    text-align:right;
+    line-height:70px;
+    font-size:0.9rem;
+    color:#009687;
+}
+
+.live-chat {
+    width:100%;
+    height:100%;
+    background-image:url('./img/mine.jpg');
 }

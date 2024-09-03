@@ -15,28 +15,59 @@
                 <div id="web-app" class="container-xxl position-relative p-0">
                     <div class="my-row d-flex">
                         <div class="col-4">
-                            <header class="header-bg d-flex justify-content-between">
+                            <header class="header-bg d-flex justify-content-between"> <!-- Header contente informazioni utente -->
                                 <div class="user-propic d-flex p-2 ps-2">
                                     <img src="img/avatar_io.jpg" alt="Propic">
                                     <div class="d-flex align-content-center justify-content-center flex-wrap ms-2">Terminator</div>
                                 </div>
                                 
-                                <div class="h-100 d-flex align-items-center">
+                                <div class="h-100 d-flex align-items-center"> <!-- Buttons -->
                                     <i class="fa-solid fa-circle-notch fs-5 mx-2"></i>
                                     <i class="fa-solid fa-message fs-5 mx-2"></i>
                                     <i class="fa-solid fa-ellipsis-vertical fs-5 mx-2 me-3"></i>
                                 </div>
                             </header>
-                            <main>
-                                <div class="notify-sec">
+                            <main> <!-- Inizio main sezione di sinistra ( Lista delle chat ) -->
+                                <div class="notify-sec d-flex align-items-center">
                                     <div class="white-circle d-flex justify-content-center align-items-center">
-                                        <i class="fa-solid fa-bell-slash"></i>
+                                        <i class="fa-solid fa-bell-slash"></i>                                       
                                     </div>
+                                    
+                                    <!-- Sezione notifiche -->
+                                    <div class="notify-string d-flex justify-content-center align-items-center">
+                                        <p class="m-0 p-0 ms-2">Ricevi notifiche di nuovi messaggi<br><span class="m-0 p-0">Attiva notifiche desktop</span></p>
+                                    </div>
+                                </div>
+                                <form>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </form>
+
+                                <div class="chat-section"> <!-- Lista delle chat -->
+                                    
+                                    <div v-for="(items, index) in contacts" class="chat d-flex align-items-center">
+                                        <img class="ms-2" :src="items.avatar" :alt="items.name">
+                                        <div class="chat-name d-flex">
+                                            <div>
+                                                <h5 class="m-0">{{items.name}}</h5>
+                                                <p class="m-0">{{items.messages[items.messages.length-1].message}}</p>
+                                            </div>
+                                            <div class="time">
+                                                {{items.messages[items.messages.length-1].date}}
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </main>
                         </div>
                         <div class="col-8">
                             <header class="header-bg"></header>
+                            <main>
+                                <div class="live-chat"></div>
+                            </main>
                         </div>
                     </div>                    
                 </div>
