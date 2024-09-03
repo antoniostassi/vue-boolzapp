@@ -119,13 +119,13 @@ form input.form-control:focus {
     background-color: rgba(239, 239, 240, 1);
 }
 
-.chat > img {
+.chat img {
     width:60px;
     height:60px;
     border-radius:50px;
 }
 
-.chat > .chat-name {
+.chat .chat-name {
     margin-left:15px;
     width:78%;
     border-bottom:1px solid rgba(239, 239, 240, 0.8);
