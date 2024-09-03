@@ -5,7 +5,7 @@
 }
 
 :root{
-    --webapp-height: 85dvh;
+    --webapp-height: 88dvh;
     --header-height: 65px ;
 }
 
@@ -129,12 +129,12 @@ form input.form-control:focus {
     padding-top:15.1px;
 }
 
-.chat-name p {
+.chat-name p { /* Comportamento del testo anteprima di ogni chat in lista */
     max-width:250px;
     padding-bottom:15.1px;
     overflow:hidden;
     white-space:nowrap;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; /* Mette i puntini al posto delle parole delle stringe troppo lunghe */
 }
 
 .chat-name > .time {
