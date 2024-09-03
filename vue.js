@@ -167,10 +167,20 @@ const app = createApp ({
                     ],
                 }
             ],
-            currentChat: 0
+            currentChat: 0,
+            messageInput: ""
         }
     },
     methods: {
-
+        newMessage() {
+            const myNewDate = new Date();
+            const msgObject = {
+                date: myNewDate.getHours()+":"+myNewDate.getMinutes(),
+                message:this.messageInput,
+                status:'sent'
+            }
+            this.contacts[this.currentChat].messages.push(msgObject);
+            this.messageInput = "";
+        }
     }
 }).mount("#app");

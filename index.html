@@ -56,7 +56,7 @@
                                         <div class="chat-name d-flex">
                                             <div>
                                                 <h5 class="m-0">{{items.name}}</h5>
-                                                <p class="m-0">{{items.messages[items.messages.length-1].message}}</p>
+                                                <p class="m-0"><span v-show="items.messages[items.messages.length-1].status!='sent'">{{items.name}}: </span>{{items.messages[items.messages.length-1].message}}</p>
                                             </div>
                                             <div class="time">
                                                 {{items.messages[items.messages.length-1].date}}
@@ -101,11 +101,11 @@
                                     </div>
                                     <div class="text-bar p-2 position-absolute bottom-0 w-100 d-flex align-items-center">
                                         <i class="fa-regular fa-face-smile fs-4 ms-3 me-4"></i>
-                                        <form class="w-100">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control">
-                                            </div>
-                                        </form>
+
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" v-model="messageInput" @keyup.enter.prevent="newMessage()">
+                                        </div>
+                                        
                                         <i class="fa-solid fa-microphone fs-4 ms-4 me-3"></i>
                                         
                                     </div>

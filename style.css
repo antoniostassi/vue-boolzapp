@@ -132,7 +132,7 @@ form input.form-control:focus {
 }
 
 .chat-name h5 {
-    padding-top:15.1px;
+    padding-top:17px;
 }
 
 .chat-name p { /* Comportamento del testo anteprima di ogni chat in lista */
@@ -141,6 +141,9 @@ form input.form-control:focus {
     overflow:hidden;
     white-space:nowrap;
     text-overflow: ellipsis; /* Mette i puntini al posto delle parole delle stringe troppo lunghe */
+    font-size:0.8rem;
+    padding-top:4px;
+    color:gray;
 }
 
 .chat-name > .time {
