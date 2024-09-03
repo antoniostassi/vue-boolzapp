@@ -86,7 +86,7 @@
                             </header>
 
                             <main>
-                                <div class="live-chat pt-3">
+                                <div class="live-chat pt-3 position-relative">
                                     <div 
                                         v-for="(items, index) in contacts[currentChat].messages" 
                                         class="d-flex" 
@@ -97,8 +97,19 @@
                                             <p class="p-2 p-message"
                                             :class="{
                                                 'received': items.status.includes('sent')
-                                            }">{{items.message}}</p>
+                                            }">{{items.message}} <span class="date-time ms-1">{{items.date}}</span></p>
                                     </div>
+                                    <div class="text-bar p-2 position-absolute bottom-0 w-100 d-flex align-items-center">
+                                        <i class="fa-regular fa-face-smile fs-4 ms-3 me-4"></i>
+                                        <form class="w-100">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </form>
+                                        <i class="fa-solid fa-microphone fs-4 ms-4 me-3"></i>
+                                        
+                                    </div>
+                                    
                                 </div>
                             </main>
                         </div>

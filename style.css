@@ -55,9 +55,10 @@ main {
 }
 
 .header-bg > div.h-100 > .fa-solid:hover,
-.white-circle,
-.notify-sec > .notify-string > p > span,
-.chat {
+.white-circle:hover,
+.notify-sec > .notify-string > p > span:hover,
+.chat:hover,
+.text-bar > i:hover {
     cursor:pointer;
 }
 
@@ -172,4 +173,23 @@ form input.form-control:focus {
 .received {
     background-color:gray;
     color:white;
+}
+
+.text-bar {
+    background-color:#f2ede9;
+}
+
+.text-bar > i {
+    color:gray;
+}
+
+.w-100 > .input-group > input {
+    border-radius:9px;
+}
+
+.date-time {
+    font-size:0.6rem;
+    position:relative;
+    top:7px;
+    color:whitesmoke;
 }
