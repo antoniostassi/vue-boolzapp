@@ -149,8 +149,22 @@ form input.form-control:focus {
     width:100%;
     height:100%;
     background-image:url('./img/mine.jpg');
+    overflow-y:auto;
 }
 
 .last-login {
     font-size:0.8rem;
+}
+
+.p-message {
+    background-color: #03c1ae;
+    border-radius: 10px;
+    color:white;
+    font-size:0.85rem;
+    max-width:45%;
+}
+
+.received {
+    background-color:gray;
+    color:white;
 }
