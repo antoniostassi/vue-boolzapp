@@ -9,15 +9,24 @@
     height:100dvh;
 }
 
-.green-bar > .container-lg {
-    height:70dvh;
+.green-bar {
+    width:100%;
+    height:120px;
+    background-color: #009687;
+}
+
+.green-bar > #web-app {
+    height:85dvh;
     border:1px solid black;
     background-color:white;
     top:50px;
 }
 
-.green-bar {
-    width:100%;
-    height:120px;
-    background-color: #009687;
+#web-app > .col-4 { 
+    border-right:1px solid rgba(239, 239, 240, 0.7);
+}
+
+.header-bg {
+    background-color: #ebebeb;
+    height:80px;
 }
