@@ -166,7 +166,8 @@ const app = createApp ({
                         }
                     ],
                 }
-            ]
+            ],
+            currentChat: 0
         }
     },
     methods: {

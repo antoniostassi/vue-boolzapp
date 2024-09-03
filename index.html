@@ -64,9 +64,27 @@
                             </main>
                         </div>
                         <div class="col-8">
-                            <header class="header-bg"></header>
+
+                            <header class="header-bg d-flex justify-content-between"> <!-- Header contente informazioni utente -->
+                                <div class="user-propic d-flex p-2 ps-2">
+                                    <img :src="contacts[currentChat].avatar" :alt=contacts[currentChat].name>
+                                    <div>
+                                        <p class="m-0 p-0 ms-2 mt-1">{{contacts[currentChat].name}}</p>
+                                        <p class="m-0 p-0 ms-2 last-login">Ultimo accesso alle 12:00</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="h-100 d-flex align-items-center"> <!-- Buttons -->
+                                    <i class="fa-solid fa-magnifying-glass fs-5 mx-2"></i>
+                                    <i class="fa-solid fa-link fs-5 mx-2"></i>
+                                    <i class="fa-solid fa-ellipsis-vertical fs-5 mx-2 me-3"></i>
+                                </div>
+                            </header>
+
                             <main>
-                                <div class="live-chat"></div>
+                                <div class="live-chat">
+                                    
+                                </div>
                             </main>
                         </div>
                     </div>                    

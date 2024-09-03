@@ -150,3 +150,7 @@ form input.form-control:focus {
     height:100%;
     background-image:url('./img/mine.jpg');
 }
+
+.last-login {
+    font-size:0.8rem;
+}
