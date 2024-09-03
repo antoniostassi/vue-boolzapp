@@ -83,14 +83,17 @@
 
                             <main>
                                 <div class="live-chat pt-3">
-                                    <div class="d-flex justify-content-end pe-3">
-                                        <p class="p-2 p-message">Questo è un messaggio!</p>
-                                    </div>
-                                    <div class="d-flex justify-content-start ps-3">
-                                        <p class="p-2 p-message received">Questo è un messaggio! blablablbalbalbalbblablbalblablablblablalbal Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reprehenderit, perspiciatis consequatur maxime, dignissimos maiores nesciunt iure ducimus corrupti natus nisi mollitia sit qui itaque similique inventore? Perspiciatis, quia molestias.</p>
-                                    </div>
-                                    <div class="d-flex justify-content-end pe-3">
-                                        <p class="p-2 p-message">Questo è un messaggio! blablablbalbalbalbblablbalblablablblablalbal Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reprehenderit, perspiciatis consequatur maxime, dignissimos maiores nesciunt iure ducimus corrupti natus nisi mollitia sit qui itaque similique inventore? Perspiciatis, quia molestias.</p>
+                                    <div 
+                                        v-for="(items, index) in contacts[currentChat].messages" 
+                                        class="d-flex" 
+                                        :class="{
+                                            'justify-content-end pe-3': items.status.includes('sent'),
+                                            'justify-content-start ps-3': items.status.includes('received')
+                                        }">
+                                            <p class="p-2 p-message"
+                                            :class="{
+                                                'received': items.status.includes('sent')
+                                            }">{{items.message}}</p>
                                     </div>
                                 </div>
                             </main>
