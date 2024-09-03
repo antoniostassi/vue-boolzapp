@@ -73,7 +73,7 @@
                                     <img :src="contacts[currentChat].avatar" :alt=contacts[currentChat].name>
                                     <div>
                                         <p class="m-0 p-0 ms-2 mt-1">{{contacts[currentChat].name}}</p>
-                                        <p class="m-0 p-0 ms-2 last-login">Ultimo accesso alle 12:00</p>
+                                        <p class="m-0 p-0 ms-2 last-login">Ultimo accesso alle {{contacts[currentChat].messages[contacts[currentChat].messages.length-1].date}}</p>
                                     </div>
                                 </div>
                                 
