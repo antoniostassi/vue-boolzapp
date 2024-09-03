@@ -109,7 +109,8 @@ form input.form-control:focus {
     height:80px;
 }
 
-.chat:hover {
+.chat:hover,
+.selected-chat {
     background-color: rgba(239, 239, 240, 0.5);
 }
 

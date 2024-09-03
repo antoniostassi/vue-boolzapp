@@ -47,7 +47,11 @@
 
                                 <div class="chat-section"> <!-- Lista delle chat -->
                                     
-                                    <div v-for="(items, index) in contacts" class="chat d-flex align-items-center">
+                                    <div 
+                                    v-for="(items, index) in contacts" 
+                                    class="chat d-flex align-items-center" 
+                                    :class="{'selected-chat':index==currentChat}"
+                                    @click="currentChat=index">
                                         <img class="ms-2" :src="items.avatar" :alt="items.name">
                                         <div class="chat-name d-flex">
                                             <div>
