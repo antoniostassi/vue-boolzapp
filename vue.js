@@ -182,6 +182,26 @@ const app = createApp ({
             }
             this.contacts[this.currentChat].messages.push(msgObject);
             this.messageInput = "";
+        },
+        changeIndex(){
+            if (this.currentChat != 0){
+                this.contacts.unshift(this.contacts[this.currentChat]);
+                this.contacts.splice(this.currentChat+1, 1);
+                this.currentChat = 0;
+            }
+        },
+        sendMessage() {
+            const data = new Date();
+            const newObj = {
+                date: data.getHours()+":"+data.getMinutes(),
+                message:"Ciao! Ok :)",
+                status:"received"
+            };
+            
+            setTimeout(() => {
+                this.contacts[this.currentChat].messages.push(newObj);
+                // Run after 1000 milliseconds
+            }, 1000);
         }
     }
 }).mount("#app");

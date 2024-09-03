@@ -102,7 +102,7 @@
                                         <i class="fa-regular fa-face-smile fs-4 ms-3 me-4"></i>
 
                                         <div class="input-group">
-                                            <input type="text" class="form-control" v-model="messageInput" @keyup.enter.prevent="newMessage()">
+                                            <input type="text" class="form-control" v-model="messageInput" @keyup.enter.prevent="newMessage(); changeIndex(); sendMessage();">
                                         </div>
                                         
                                         <i class="fa-solid fa-microphone fs-4 ms-4 me-3"></i>
