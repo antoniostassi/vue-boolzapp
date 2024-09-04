@@ -98,16 +98,16 @@
                                                 'received': items.status.includes('received')
                                             }">{{items.message}} <span class="date-time ms-1">{{items.date}}</span></p>
                                     </div>
-                                    <div class="text-bar p-2 position-absolute bottom-0 w-100 d-flex align-items-center">
-                                        <i class="fa-regular fa-face-smile fs-4 ms-3 me-4"></i>
+                                    
+                                </div>
+                                <div class="text-bar p-2 w-100 d-flex align-items-center">
+                                    <i class="fa-regular fa-face-smile fs-4 ms-3 me-4"></i>
 
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" v-model="messageInput" @keyup.enter.prevent="newMessage(); changeIndex(); sendMessage();">
-                                        </div>
-                                        
-                                        <i class="fa-solid fa-microphone fs-4 ms-4 me-3"></i>
-                                        
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" v-model="messageInput" @keyup.enter.prevent="newMessage(); changeIndex(); sendMessage();">
                                     </div>
+                                    
+                                    <i class="fa-solid fa-microphone fs-4 ms-4 me-3"></i>
                                     
                                 </div>
                             </main>
