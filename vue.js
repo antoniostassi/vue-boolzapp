@@ -202,6 +202,11 @@ const app = createApp ({
                 this.contacts[this.currentChat].messages.push(newObj);
                 // Run after 1000 milliseconds
             }, 1000);
+        },
+        deleteMessage(item, object) {
+            
+            object.splice(item,1);
+        
         }
     }
 }).mount("#app");

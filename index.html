@@ -93,10 +93,21 @@
                                             'justify-content-end pe-3': items.status.includes('sent'),
                                             'justify-content-start ps-3': items.status.includes('received')
                                         }">
-                                            <p class="p-2 p-message"
+                                            <p class="p-2 p-message position-relative" 
+                                            data-bs-toggle="dropdown"
                                             :class="{
                                                 'received': items.status.includes('received')
-                                            }">{{items.message}} <span class="date-time ms-1">{{items.date}}</span></p>
+                                            }">
+                                            {{items.message}} <!-- Messaggio -->
+                                            <span class="position-absolute" aria-expanded="false" ><i class="fa-solid fa-caret-down p-1"></i></span>
+                                            <span class="date-time ms-1">{{items.date}}</span> <!-- Data -->
+                                            
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#" @click.prevent="deleteMessage(index, contacts[currentChat].messages);">Elimina messaggio</a></li>
+                                            </ul>
+                                            
+                                        
+                                            </p>
                                     </div>
                                     
                                 </div>
@@ -108,7 +119,6 @@
                                     </div>
                                     
                                     <i class="fa-solid fa-microphone fs-4 ms-4 me-3"></i>
-                                    
                                 </div>
                             </main>
                         </div>
@@ -116,7 +126,7 @@
                 </div>
             </div>
         </div>
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="vue.js"></script>
     </body>
