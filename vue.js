@@ -167,15 +167,15 @@ const app = createApp ({
                     ],
                 }
             ],
-            currentChat: 0,
-            searchInput: "",
-            messageInput: ""
+            currentChat: 0, // Variabile di controllo sulla chat attiva.
+            searchInput: "", // Variabile utilizzata come v-model per l'input di ricerca.
+            messageInput: "" // Variabile utilizzata come v-model per l'input di invio messaggi.
         }
     },
     methods: {
         newMessage() {
             const myNewDate = new Date();
-            const msgObject = {
+            const msgObject = { // Creo il nuovo object per il messaggio
                 date: myNewDate.getHours()+":"+myNewDate.getMinutes(),
                 message:this.messageInput,
                 status:'sent'
@@ -185,27 +185,28 @@ const app = createApp ({
         },
         changeIndex(){
             if (this.currentChat != 0){
-                this.contacts.unshift(this.contacts[this.currentChat]);
-                this.contacts.splice(this.currentChat+1, 1);
-                this.currentChat = 0;
+                this.contacts.unshift(this.contacts[this.currentChat]); // Aggiungo la chat corrente come oggetto a indice 0 nell'array
+                this.contacts.splice(this.currentChat+1, 1); // Rimuovo la chat corrente altrimenti la visualizzerò 2 volte. ( +1 )
+                this.currentChat = 0; // Imposto la chat attiva corrente a 0 perché adesso corrisponde a 0.
             }
         },
         sendMessage() {
             const data = new Date();
-            const newObj = {
-                date: data.getHours()+":"+data.getMinutes(),
-                message:"Ciao! Ok :)",
+            const newObj = { // Creo il nuovo object per il messaggio
+                date: data.getHours()+":"+data.getMinutes(), // Inserisco soltanto l'ora e i minuti.
+                message:"Ok :)",
                 status:"received"
             };
             
-            setTimeout(() => {
-                this.contacts[this.currentChat].messages.push(newObj);
-                // Run after 1000 milliseconds
+            setTimeout(() => { // Creo un Timeout che dopo 1 secondo invierà il messaggio
+                this.contacts[this.currentChat].messages.push(newObj); // Pushando l'object all'interno dell'array di oggetti.
+                
             }, 1000);
         },
-        deleteMessage(item, object) {
-            
-            object.splice(item,1);
+        deleteMessage(item, object) { 
+            // item = index
+            // object = contacts[chatCorrente].messages ( Array contente tutti i messaggi della chat attiva)
+            object.splice(item,1); // Funzione che rimuoverà l'oggetto del messaggio in funzione del suo indice
         
         }
     }
