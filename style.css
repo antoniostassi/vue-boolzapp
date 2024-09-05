@@ -103,7 +103,7 @@ form input.form-control:focus {
 
 .chat-section {
     overflow-y:auto;
-    max-height:83%;
+    max-height:80%;
 }
 
 .chat {
