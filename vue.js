@@ -1,6 +1,8 @@
 
 const {createApp} = Vue;
+console.log("Features aggiuntive:\n1 - Aggiornamento dell'ultimo accesso in base all'ultimo messaggio.\n2 - Aggiornamento in tempo reale della preview dei messaggi. Se il messaggio è stato ricevuto da un contatto, leggeremo il nome del contatto prima del messaggio, altrimenti leggeremo soltanto il messaggio inviato (che corrisponderà al nostro).\n3 - Aggiornamento in tempo reale dell'ordine cronologico delle chat.")
 console.log("Problemi noti:\n1 - Problema relativo al toggle del dropdown quando si elimina un messaggio diverso dall'ultimo inviato.\n2 - Problema relativo all'eliminazione di tutti i messaggi di una chat, lo script darà errore poiché l'index cercherà sempre una chiave che non esiste più.")
+
 const app = createApp ({
     data() {
         return{
