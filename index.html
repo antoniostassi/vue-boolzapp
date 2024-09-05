@@ -85,7 +85,9 @@
                             </header>
 
                             <main>
-                                <div class="live-chat pt-3 position-relative">
+
+                                <div class="live-chat pt-3 position-relative"> <!-- Pannello chat -->
+                                    <!--Creazione dinamica dei messaggi nel pannello -->
                                     <div 
                                         v-for="(items, index) in contacts[currentChat].messages" 
                                         class="d-flex" 

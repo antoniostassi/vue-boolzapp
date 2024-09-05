@@ -1,3 +1,5 @@
+/* Global Settings */
+
 * {
     margin:0;
     padding:0;
@@ -18,10 +20,27 @@ main {
     width:100%;
 }
 
+form .input-group-text,
+form input.form-control {
+    border-radius:0;
+}
+
+form .input-group-text:hover {
+    cursor:pointer;
+    background-color: rgba(239, 239, 240, 0.8);
+}
+
+form input.form-control:focus {
+    box-shadow:none;
+    border-color:#009687;
+}
+
 .container-fluid {
     background-color: #dbdbd3;
     height:100dvh;
 }
+
+/* Application Classes */
 
 .green-bar {
     width:100%;
@@ -54,16 +73,7 @@ main {
     color:#b0b0b0;
 }
 
-.header-bg > div.h-100 > .fa-solid:hover,
-.white-circle:hover,
-.notify-sec > .notify-string > p > span:hover,
-.chat:hover,
-.text-bar > i:hover,
-.p-message:hover{
-    cursor:pointer;
-}
-
-.fa-solid.fa-message {
+.fa-solid.fa-message { /* Middle con padding fix */
     padding-top:2px;
 }
 
@@ -86,20 +96,7 @@ main {
     color: gray;
 }
 
-form .input-group-text,
-form input.form-control {
-    border-radius:0;
-}
-
-form .input-group-text:hover {
-    cursor:pointer;
-    background-color: rgba(239, 239, 240, 0.8);
-}
-
-form input.form-control:focus {
-    box-shadow:none;
-    border-color:#009687;
-}
+/* Chat Classes */
 
 .chat-section {
     overflow-y:auto;
@@ -166,6 +163,7 @@ form input.form-control:focus {
     font-size:0.8rem;
 }
 
+/* Classe per i singoli messaggi nel pannello */
 .p-message {
     background-color: #03c1ae;
     border-radius: 10px;
@@ -198,11 +196,6 @@ form input.form-control:focus {
     color:whitesmoke;
 }
 
-p > .dropdown-toggle {
-    height:0px;
-    width:0px;
-}
-
 p > span.position-absolute {
     bottom:10px;
     right:12px;
@@ -211,4 +204,15 @@ p > span.position-absolute {
 
 .p-message:hover .position-absolute {
     opacity: 1;
+}
+
+
+/* Cursor Pointer  */
+.header-bg > div.h-100 > .fa-solid:hover,
+.white-circle:hover,
+.notify-sec > .notify-string > p > span:hover,
+.chat:hover,
+.text-bar > i:hover,
+.p-message:hover{
+    cursor:pointer;
 }

@@ -1,6 +1,6 @@
 
 const {createApp} = Vue;
-
+console.log("Problemi noti:\n1 - Problema relativo al toggle del dropdown quando si elimina un messaggio diverso dall'ultimo inviato.\n2 - Problema relativo all'eliminazione di tutti i messaggi di una chat, lo script darà errore poiché l'index cercherà sempre una chiave che non esiste più.")
 const app = createApp ({
     data() {
         return{
